@@ -1,0 +1,16 @@
+D:\USF\Sem 2\DIS\ISM_6225_Spring_2022_Assignment_1\Assignment_1_Spring_2022\obj\Debug\net5.0\Assignment_1_Spring_2022.csproj.AssemblyReference.cache
+D:\USF\Sem 2\DIS\ISM_6225_Spring_2022_Assignment_1\Assignment_1_Spring_2022\obj\Debug\net5.0\Assignment_1_Spring_2022.GeneratedMSBuildEditorConfig.editorconfig
+D:\USF\Sem 2\DIS\ISM_6225_Spring_2022_Assignment_1\Assignment_1_Spring_2022\obj\Debug\net5.0\Assignment_1_Spring_2022.AssemblyInfoInputs.cache
+D:\USF\Sem 2\DIS\ISM_6225_Spring_2022_Assignment_1\Assignment_1_Spring_2022\obj\Debug\net5.0\Assignment_1_Spring_2022.AssemblyInfo.cs
+D:\USF\Sem 2\DIS\ISM_6225_Spring_2022_Assignment_1\Assignment_1_Spring_2022\obj\Debug\net5.0\Assignment_1_Spring_2022.csproj.CoreCompileInputs.cache
+D:\USF\Sem 2\DIS\ISM_6225_Spring_2022_Assignment_1\Assignment_1_Spring_2022\bin\Debug\net5.0\Assignment_1_Spring_2022.exe
+D:\USF\Sem 2\DIS\ISM_6225_Spring_2022_Assignment_1\Assignment_1_Spring_2022\bin\Debug\net5.0\Assignment_1_Spring_2022.deps.json
+D:\USF\Sem 2\DIS\ISM_6225_Spring_2022_Assignment_1\Assignment_1_Spring_2022\bin\Debug\net5.0\Assignment_1_Spring_2022.runtimeconfig.json
+D:\USF\Sem 2\DIS\ISM_6225_Spring_2022_Assignment_1\Assignment_1_Spring_2022\bin\Debug\net5.0\Assignment_1_Spring_2022.runtimeconfig.dev.json
+D:\USF\Sem 2\DIS\ISM_6225_Spring_2022_Assignment_1\Assignment_1_Spring_2022\bin\Debug\net5.0\Assignment_1_Spring_2022.dll
+D:\USF\Sem 2\DIS\ISM_6225_Spring_2022_Assignment_1\Assignment_1_Spring_2022\bin\Debug\net5.0\ref\Assignment_1_Spring_2022.dll
+D:\USF\Sem 2\DIS\ISM_6225_Spring_2022_Assignment_1\Assignment_1_Spring_2022\bin\Debug\net5.0\Assignment_1_Spring_2022.pdb
+D:\USF\Sem 2\DIS\ISM_6225_Spring_2022_Assignment_1\Assignment_1_Spring_2022\obj\Debug\net5.0\Assignment_1_Spring_2022.dll
+D:\USF\Sem 2\DIS\ISM_6225_Spring_2022_Assignment_1\Assignment_1_Spring_2022\obj\Debug\net5.0\ref\Assignment_1_Spring_2022.dll
+D:\USF\Sem 2\DIS\ISM_6225_Spring_2022_Assignment_1\Assignment_1_Spring_2022\obj\Debug\net5.0\Assignment_1_Spring_2022.pdb
+D:\USF\Sem 2\DIS\ISM_6225_Spring_2022_Assignment_1\Assignment_1_Spring_2022\obj\Debug\net5.0\Assignment_1_Spring_2022.genruntimeconfig.cache

@@ -16,12 +16,12 @@ namespace DIS_Assignmnet1_SPRING_2022
             Console.WriteLine("Q1: Enter the string:");
             string s = Console.ReadLine();
             string final_string = RemoveVowels(s);
-            Console.WriteLine("Final string after removing the Vowels: {0}",final_string);
+            Console.WriteLine("Final string after removing the Vowels: {0}", final_string);
             Console.WriteLine();
 
             //Question 2:
-            string[] bulls_string1 = new string[]{"Marshall", "Student","Center"};
-            string[] bulls_string2 = new string[]{"MarshallStudent", "Center"};
+            string[] bulls_string1 = new string[] { "Marshall", "Student", "Center" };
+            string[] bulls_string2 = new string[] { "MarshallStudent", "Center" };
             bool flag = ArrayStringsAreEqual(bulls_string1, bulls_string2);
             Console.WriteLine("Q2");
             if (flag)
@@ -59,7 +59,7 @@ namespace DIS_Assignmnet1_SPRING_2022
 
             //Quesiton 6:
             string bulls_string6 = "mumacollegeofbusiness";
-            char ch ='c';
+            char ch = 'c';
             string reversed_string = ReversePrefix(bulls_string6, ch);
             Console.WriteLine("Q6:");
             Console.WriteLine("Resultant string are reversing the prefix:{0}", reversed_string);
@@ -89,8 +89,26 @@ namespace DIS_Assignmnet1_SPRING_2022
         {
             try
             {
-                // write your code here
-                String final_string ="";
+                char[] output = new char[10000];
+                int x = 0;
+
+                for (int i = 0; i < s.Length; i++)
+                {
+                    //if the character is not in vowels, append that to output at X location
+                    if (Convert.ToChar(s[i]) != 'a' && Convert.ToChar(s[i]) != 'e' && Convert.ToChar(s[i]) != 'i' && Convert.ToChar(s[i]) != 'o' && Convert.ToChar(s[i]) != 'u' && Convert.ToChar(s[i]) != 'A' && Convert.ToChar(s[i]) != 'E' && Convert.ToChar(s[i]) != 'I' && Convert.ToChar(s[i]) != 'O' && Convert.ToChar(s[i]) != 'U')
+                    {
+                        output[x] = s[i];
+                        x++;
+                    }
+                    else
+                    {
+                        continue;
+                    }
+                }
+
+                string str = new string(output);
+                String final_string = "";
+                final_string = str;
                 return final_string;
             }
             catch (Exception)
@@ -123,10 +141,24 @@ namespace DIS_Assignmnet1_SPRING_2022
 
         private static bool ArrayStringsAreEqual(string[] bulls_string1, string[] bulls_string2)
         {
+            //string b1 = "";
+            //string b2 = "";
             try
             {
-                // write your code here.
-                return false;
+
+                string b1 = String.Concat(bulls_string1);
+                string b2 = String.Concat(bulls_string2);
+
+                if (b1 == b2) // if both the strings are equal after concatinating, return true. Else return false
+                {
+                    return true;
+                }
+
+                else
+                {
+                    return false;
+                }
+
             }
             catch (Exception)
             {
@@ -156,10 +188,31 @@ namespace DIS_Assignmnet1_SPRING_2022
 
         private static int SumOfUnique(int[] bull_bucks)
         {
+            int x = 0;
+            int add = 0;
+            
             try
             {
-                // write your code here
-                return 0;
+                //Loops to check elements with all the elements present in the array
+                for (int i=0; i<bull_bucks.Length; i++)
+                {
+                    x = 0;
+                    for(int j = 0; j < bull_bucks.Length; j++)
+                    {
+                        if(bull_bucks[i] != bull_bucks[j]) //if the elements are not equal, increment x
+                        {
+                            x++;
+                            if(x == bull_bucks.Length-1)// this tells us when the loop reaches the last element.
+                            {
+                                add += bull_bucks[i];
+                                x = 0;
+                            }
+                        }
+
+
+                    }
+                }
+                return add;
 
             }
             catch (Exception)
@@ -192,9 +245,29 @@ namespace DIS_Assignmnet1_SPRING_2022
         {
             try
             {
-                // write your code here.
+                int L = bulls_grid.GetLength(0); //getting the length of the matrix
+                int add = 0, index;
 
-                return 0;
+
+                for(int i=0; i<L; i++)
+                {
+                    add += bulls_grid[i, i]; //adding the elements with same indices
+                    
+                }
+                for(int i=0;i<L;i++)
+                {
+                    for(int j=L-1; j>=0;j--)
+                    {
+                        add+= bulls_grid[i, j];// adding elements from the back to zero
+                        i++;
+                    }
+                }
+                if(L%2 != 0 && L>1) //if the matrix length is not even, we need to minus the middle element in the matrix from the addition
+                {
+                    index = (L-1)/ 2;
+                    add = add - bulls_grid[index, index]; //minus the middle element of the matrix as it's been added twice
+                }
+                return add;
             }
             catch (Exception e)
             {
@@ -211,7 +284,7 @@ namespace DIS_Assignmnet1_SPRING_2022
          
         <summary>
         Given a string bulls_string  and an integer array indices of the same length.
-        The string bulls_string  will be shuffled such that the character at the ith position moves to indices[i] in the shuffled string.
+        The string bulls_string  will be shuffled such that the character at the ith position moves to indicey in the shuffled string.
         Return the shuffled string.
 
         Example 3:
@@ -224,8 +297,15 @@ namespace DIS_Assignmnet1_SPRING_2022
         {
             try
             {
-                // write your code here.
-                return "null";
+                char[] output = new char[100];
+
+                for (int i = 0; i < bulls_string.Length; i++)
+                {
+                    output[indices[i]] = bulls_string[i];
+                }
+                string finaloutput = new string(output);
+
+                return finaloutput;
             }
             catch (Exception e)
             {
@@ -264,7 +344,18 @@ namespace DIS_Assignmnet1_SPRING_2022
         {
             try
             {
-                String prefix_string ="";
+                int ind = bulls_string6.IndexOf(ch); //get the index at which ch lies.
+                string output = "";
+                for (int i= ind; i>=0; i--) //Looping back to zero from ch to print in reverse
+                {
+                    output += bulls_string6[i]; 
+                }
+
+                for (int i = ind+1; i < bulls_string6.Length; i++)// from next to index position, print normally
+                {
+                    output += bulls_string6[i];
+                }
+                String prefix_string =output;
                 return prefix_string;
             }
             catch (Exception)
